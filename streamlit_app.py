@@ -16,7 +16,7 @@ def init_connection():
     return con
  
  
-# Perform query, using st.experimental_memo to only rerun when the query changes or after 10 min.
+# Pexrform query, using st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
 def run_query(query):
     with conn.cursor() as cur:
